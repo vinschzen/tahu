@@ -1,70 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Model Preview</title>
-    <style>
-        body {
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-    <script type="module">
-        import * as THREE from 'https://cdn.skypack.dev/three@0.129.0/build/three.module.js';
-        import { OrbitControls } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js';
-        import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
 
-        const scene = new THREE.Scene();
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
+    <title>Tahu Nusantar</title>
+  </head>
+  <body>
 
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
 
-const loader = new GLTFLoader();
-loader.load('gorengan.glb', (gltf) => {
-    const model = gltf.scene;
-    scene.add(model);
-});
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> 
+    
+    <div class="site-navbar-wrap">
+      <div class="site-navbar-top">
+        <div class="container py-3">
+          <div class="row align-items-center">
+            <div class="col-6">
+              <div class="d-flex mr-auto">
+                <a href="#" class="d-flex align-items-center mr-4">
+                  <span class="icon-envelope mr-2"></span>
+                  <span class="d-none d-md-inline-block">info@domain.com</span>
+                </a>
+                <a href="#" class="d-flex align-items-center mr-auto">
+                  <span class="icon-phone mr-2"></span>
+                  <span class="d-none d-md-inline-block">+1 234 4567 8910</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-6 text-right">
+              <div class="mr-auto">
+                <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
+                <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
+                <a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
+                <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
 
-const ambientLight = new THREE.AmbientLight(0x404040);
-scene.add(ambientLight);
+      <div class="site-navbar site-navbar-target js-sticky-header">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-2">
+              <h1 class="my-0 site-logo"><a href="index.html">TAHU</a></h1>
+            </div>
+            <div class="col-10">
+              <nav class="site-navigation text-right" role="navigation">
+                <div class="container">
+                  <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
-const directionalLight = new THREE.DirectionalLight(0xffffff);
-directionalLight.position.set(1, 1, 1);
-scene.add(directionalLight);
+                  <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
+                    <li class="active"><a href="#home-section" class="nav-link" onclick="showContent('home')">Home</a></li>
+                    <li><a href="#about-section" class="nav-link" onclick="showContent('about')" >About</a></li>
+                    <li class="has-children">
+                      <a href="#" class="nav-link">Pages</a>
+                      <ul class="dropdown arrow-top">
+                        <li><a href="#" class="nav-link">Team</a></li>
+                        <li><a href="#" class="nav-link">Pricing</a></li>
+                        <li><a href="#" class="nav-link">FAQ</a></li>
+                        <li class="has-children">
+                          <a href="#">More Links</a>
+                          <ul class="dropdown">
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Menu Three</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#contact-section" class="nav-link" onclick="showContent('contact')">🦖</a></li>
+                    <li><a class="nav-link" onclick="toggleMute()">Music</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="home">
+      <p>Welcome to Tahu Nusantara! This is the Home section.</p>
+    </div>
 
-// Add camera controls
-const controls = new OrbitControls(camera, renderer.domElement);
+    <div id="about">
+        <p>About Tahu Nusantara: Insert your about content here.</p>
+    </div>
 
-const animate = () => {
-    requestAnimationFrame(animate);
+    <div id="contact">
+        <p>🦖</p>
+    </div>
 
-    if (scene.children.length > 0) {
-        const model = scene.children[0];
-        model.rotation.x += 0.01;
-        model.rotation.y += 0.01;
-    }
+    <div id="player">
+      <audio autoplay hidden>
+       <source src="bengawansolo.mp3" type="audio/mpeg">
+                  If you're reading this, audio isn't supported. 
+      </audio>
+  </div>
 
-    // Update camera controls
-    controls.update();
 
-    renderer.render(scene, camera);
-};
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
 
-animate();
+    <script type="module" src="animation.js"></script>
+    <script src="actions.js"></script>
 
-window.addEventListener('resize', () => {
-    const newWidth = window.innerWidth;
-    const newHeight = window.innerHeight;
-    camera.aspect = newWidth / newHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(newWidth, newHeight);
-});
-    </script>
-</body>
+  </body>
 </html>
