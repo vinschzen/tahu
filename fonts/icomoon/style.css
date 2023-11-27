@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?10si43');
@@ -22,6 +23,13 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  transition: color 0.3s ease, transform 0.3s ease;
+
+}
+
+[class^="icon-"]:hover, [class*=" icon-"]:hover {
+  transform: scale(1.2); 
 }
 
 .icon-asterisk:before {
@@ -4917,3 +4925,5 @@
 .icon-zoom_out_map:before {
   content: "\e56b";
 }
+
+

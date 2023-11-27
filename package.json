@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "postprocessing": "^6.33.3",
+    "three": "^0.158.0",
+    "three-addons": "^1.2.0"
+  },
+  "name": "tahu_old",
+  "description": "A professional company profile developed with threeJS library",
+  "version": "1.0.0",
+  "main": "actions.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

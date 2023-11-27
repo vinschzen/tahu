@@ -1,7 +1,9 @@
 body {
-  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Montserrat', sans-serif;
   background-color: #fff;
   height: 200vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
   position: relative; }
   body:before {
     content: "";
@@ -28,7 +30,8 @@ p {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  font-family: 'Montserrat', sans-serif;
+}
 
 a {
   -webkit-transition: .3s all ease;
@@ -51,6 +54,8 @@ a {
   left: 0; }
   .site-navbar-wrap a {
     color: #fff; }
+  .site-navbar-wrap a:hover {
+    font-weight: bold; }
   .site-navbar-wrap .site-navbar-top {
     font-size: 0.8rem; }
 
@@ -71,6 +76,9 @@ a {
       font-size: 20px;
       font-weight: bold;
       text-transform: uppercase; }
+    .site-navbar .site-logo a:hover {
+        letter-spacing: 0.3em;
+    }
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu a {
@@ -88,7 +96,9 @@ a {
         .site-navbar .site-navigation .site-menu > li > a.active {
           color: #fff; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #fff; }
+          color: #fff; 
+          margin-left: 10px;
+          margin-right: 10px;}
       .site-navbar .site-navigation .site-menu > li:last-child {
         padding-right: 0; }
         .site-navbar .site-navigation .site-menu > li:last-child > a {
@@ -355,22 +365,28 @@ a {
       .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li.active a {
         color: #fff; }
 
-#home, #about, #contact {
+  #content div  {
     position: absolute;
-    top: 500px; 
+    /* text-shadow: 3px 3px 5px #272727; */
+    top: 420px; 
     left: 50%;
     transform: translateX(-50%);
     color: white;
     font-size: 24px;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
+    transition: opacity 0.5s ease-in-out, transform 0.2s ease-in-out;
+  }
 
-#about {
-    top: 500px; 
-}
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); 
+    z-index: 1000; 
+    mix-blend-mode:hue;
+    pointer-events: none;
+  }
 
-#contact {
-    top: 500px;
-}
