@@ -56,7 +56,7 @@ window.addEventListener('resize', () => {
 });
 
 window.showContent = function(section) {
-    const sections = ['home', 'about', 'contact'];
+    const sections = ['home', 'about', 'products'];
     sections.forEach((s) => {
         const element = document.getElementById(s);
         if (s === section) {
