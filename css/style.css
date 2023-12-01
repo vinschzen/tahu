@@ -25,12 +25,13 @@ body {
     visibility: visible; }
 
 p {
-  color: #b3b3b3;
+  color: #FFFFFF;
   font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;  
+  cursor: default;
 }
 
 a {
@@ -416,4 +417,54 @@ a {
   /* Add your content that you want to be scrollable here */
   .scrollable-content {
     padding: 15px; /* Add padding for content */
+  }
+
+  #contacts-form input[type="text"] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin: 10px;
+    color: white;
+    transition: 0.3s;
+  }
+
+  #contacts-form input[type="text"]:hover {
+    border-bottom: 3px solid white;
+  }
+
+  #contacts-form textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin: 10px;
+    color: white;
+    transition: 0.3s;
+  }
+
+  #contacts-form textarea:hover {
+    border-bottom: 3px solid white;
+  }
+
+  #contacts-form ::placeholder {
+    color: white;
+    opacity: 0.5;
+  }
+  
+
+  #contacts button {
+    margin: 30px;
+    background: white;
+    color: black;
+    border: none;
+    padding: 2px 130px;
+    border-radius: 15px;
+    top: 30px;
+    transition: 0.3s;
+  }
+
+  #contacts button:hover {
+    background: rgb(202, 202, 202);
+    border-radius: 30px;
   }
