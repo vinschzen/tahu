@@ -93,6 +93,7 @@
 		  </div>
 	  
 		  	<div id="content">
+
 				<div id="home">
 					<h1 style="font-weight: bold;">TAHU NUSANTARA</h1>
 					<p>Welcome to Tahu, where innovation meets flavor in every delectable bite. Embark on a journey of culinary excellence as we redefine the art of tofu, crafting moments that celebrate the richness of taste and the spirit of sustainability.</p>
@@ -112,14 +113,71 @@
 					<h1 style="font-weight: bold;">Where We are</h1>
 						<img src="Indonesia.png" alt="" width="1000vw">
 						<p>Nestled at the heart of our culinary journey, Tahu proudly operates from the vibrant landscapes of Indonesia. From the rich heritage of our Tahu production to the bustling energy of our team, we invite you to explore the essence of our origins and savor the taste of true Indonesian craftsmanship.</p>
-
-			
 				</div>
 
-
-			
 				<div id="products"> 
-					<img src="josh_hutcherson_whistle.jpg" width="100%" alt="">
+						<a>
+							<h1 style="font-weight: bold; text-align: left;">Tahu</h1>
+							<p style="text-align: justify; font-size: medium;">Our company takes pride in crafting the upmost exceptional, health-focused ala Indonesian tofu, offering a salivating yet tantilizingly delicious and nutritious culinary experience. These are our products.</p>
+						</a>
+						
+						
+						<figure>
+							<img src="images/1.jpg" alt="">
+							<!-- <figcaption><a href="#">1</a></figcaption> -->
+						</figure>
+						<figure class="landscape">
+							<img src="images/2.jpg" alt="">
+							<!-- <figcaption><a href="#">2</a></figcaption> -->
+						</figure>
+						<figure>
+							<img src="images/3.jpg" alt="">
+							<!-- <figcaption><a href="#">3</a></figcaption> -->
+						</figure>
+						<figure class="landscape">
+							<img src="images/5.jpg" alt="">
+							<!-- <figcaption><a href="#">5</a></figcaption> -->
+						</figure>
+						<figure>
+							<img src="images/4.jpg" alt="">
+							<!-- <figcaption><a href="#">4</a></figcaption> -->
+						</figure>
+						<figure>
+							<img src="images/6.jpg" alt="">
+							<!-- <figcaption><a href="#">6</a></figcaption> -->
+						</figure>
+						<figure>
+							<img src="images/7.jpg" alt="">
+							<!-- <figcaption><a href="#">7</a></figcaption> -->
+						</figure>
+						<figure>
+							<img src="images/8.jpg" alt="">
+							<!-- <figcaption><a href="#">8</a></figcaption> -->
+						</figure>
+						<figure class="landscape">
+							<img src="images/9.jpg" alt="">
+							<!-- <figcaption><a href="#">9</a></figcaption> -->
+						</figure>
+						<a class="landscape">
+							<h1 style="font-weight: bold; text-align: left;">Tempe</h1>
+							<p style="text-align: justify; font-size: medium;">Delve into the heart of our culinary expertise as we present our distinctive Indonesian tempe, skillfully crafted with precision and passion. Savor the richness of our tempe, meticulously prepared to embody a perfect blend of traditional flavors and wholesome goodness. At our company, we take pride in delivering a culinary experience that not only delights the taste buds but also promotes a healthy lifestyle, ensuring each bite of our tempe reflects the essence of Indonesian culinary heritage with a nutritious twist.</p>
+						</a>
+						<figure>
+							<img src="images/10.jpg" alt="">
+							<!-- <figcaption><a href="#">10</a></figcaption> -->
+						</figure>
+						<figure>
+							<img src="images/11.jpg" alt="">
+							<!-- <figcaption><a href="#">11</a></figcaption> -->
+						</figure>
+						<figure class="landscape">
+							<img src="images/12.jpg" alt="">
+							<!-- <figcaption><a href="#">11</a></figcaption> -->
+						</figure>
+						<figure>
+							<img src="images/13.jpg" alt="">
+							<!-- <figcaption><a href="#">11</a></figcaption> -->
+						</figure>
 				</div>
 
 				<div id="contacts" >
@@ -161,22 +219,34 @@
 
 		<script>
 				let translateY = 0;
-				let scrollingElement = document.getElementById('about');
-				const scrollIncrement = 30; 
+				let scrollTargetY = 0;
+				let scrollingElement = document.querySelector('#products');
 
 				function smoothScroll() {
-					translateY += (scrollTargetY - translateY) * 0.1;
-					scrollingElement.style.transform = `translateY(${translateY}vh) translateX(-47vh)`;
-
-					requestAnimationFrame(smoothScroll);
+						translateY += (scrollTargetY - translateY) * 0.1;
+						scrollingElement.style.transform = `translateY(${translateY}vh) translateX(-47vh)`;
+	
+						requestAnimationFrame(smoothScroll);
 				}
 
-				let scrollTargetY = 0;
 
 				window.addEventListener('wheel', function(event) {
-					scrollTargetY += event.deltaY > 0 ? scrollIncrement : -scrollIncrement;
-					scrollTargetY = Math.max(-120, Math.min(0, scrollTargetY));
+					document.getElementById('content').querySelectorAll('div').forEach(element => {
+						var computedStyle = window.getComputedStyle(element);
+						if (computedStyle.opacity === "1")
+						{
+							if (element.id == "home") return;
+							if (element.id == "contacts") return;
+
+							scrollingElement = element;
+							const scrollIncrement = 30; 
+							scrollTargetY += event.deltaY > 0 ? scrollIncrement : -scrollIncrement;
+							scrollTargetY = Math.max(-120, Math.min(0, scrollTargetY));
+							
+						}
+					});
 				});
+
 				smoothScroll();
 		</script>
 
@@ -411,9 +481,15 @@
 				sections.forEach((s) => {
 					const element = document.getElementById(s);
 					if (s === section) {
+						setTimeout(() => {
+							element.style.display = "";
+						}, 300);					
 						element.style.opacity = 1;
 					} else {
 						element.style.opacity = 0;
+						setTimeout(() => {
+							element.style.display = "none";
+						}, 1000);		
 					}
 				});    
 
