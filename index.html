@@ -17,6 +17,10 @@
 	</head>
 	<body>
 
+		<div style="width: 100%; height: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.8); z-index: 999; display: none">
+			
+		</div>
+
 		<div id="container">
 
 		<div class="site-mobile-menu site-navbar-target">''
@@ -111,6 +115,8 @@
 					<br><br><br>	
 
 					<h1 style="font-weight: bold;">Where We are</h1>
+						<div id="googleMap" style="width:100%;height:400px;"></div>
+
 						<img src="Indonesia.png" alt="" width="1000vw">
 						<p>Nestled at the heart of our culinary journey, Tahu proudly operates from the vibrant landscapes of Indonesia. From the rich heritage of our Tahu production to the bustling energy of our team, we invite you to explore the essence of our origins and savor the taste of true Indonesian craftsmanship.</p>
 				</div>
@@ -224,7 +230,8 @@
 
 				function smoothScroll() {
 						translateY += (scrollTargetY - translateY) * 0.1;
-						scrollingElement.style.transform = `translateY(${translateY}vh) translateX(-47vh)`;
+						scrollingElement.style.left = "50%";
+						scrollingElement.style.transform = `translate(-50%, ${translateY}vh)`;
 	
 						requestAnimationFrame(smoothScroll);
 				}
@@ -283,6 +290,8 @@
 
 			let camera, scene, renderer, bulbLight, bulbMat, hemiLight;
 			let ballMat, cubeMat, floorMat;
+
+			let selectedSection;
 
 			let previousShadowMap = false;
 
@@ -443,7 +452,6 @@
 
 				if (model) {
 					model.rotation.y += 0.003;
-					camera.lookAt(model.position);
 				}
 
 				TWEEN.update();
@@ -518,7 +526,7 @@
 						targetPosition.set(0, 0.5, 1);
 						break;
 					case 'contacts':            
-						targetPosition.set(-1, -1, -1);
+						targetPosition.set(0, 1, 1.5);
 						break;
 				};
 

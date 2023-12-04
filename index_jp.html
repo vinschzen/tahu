@@ -224,8 +224,8 @@
 
 				function smoothScroll() {
 						translateY += (scrollTargetY - translateY) * 0.1;
-						scrollingElement.style.transform = `translateY(${translateY}vh) translateX(-47vh)`;
-	
+						scrollingElement.style.transform = `translate(-50%, ${translateY}vh)`;
+
 						requestAnimationFrame(smoothScroll);
 				}
 

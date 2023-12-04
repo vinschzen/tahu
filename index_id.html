@@ -99,7 +99,7 @@
 					<p>Selamat datang di Tahu, tempat inovasi bertemu rasa di setiap gigitan lezat. Mulailah perjalanan keunggulan kuliner saat kami mendefinisikan kembali seni tahu, menciptakan momen yang merayakan kekayaan rasa dan semangat keberlanjutan.</p>				</div>
 			
 				<div id="about">
-					<h1 style="font-weight: bold;">Tentang Kami</h1>
+					<h1 style="font-weight: bold;">Deskripsi</h1>
 						<img src="Tahu.png" alt="" width="200vw">
 						<p>Tahu adalah merek premium yang didedikasikan untuk memberikan pengalaman kuliner canggih yang berpusat pada dua makanan pokok Indonesia: Tahu dan Tempe. Misi kami adalah untuk meningkatkan persepsi terhadap bahan-bahan tradisional ini dengan menawarkannya dalam penyajian yang elegan dan modern, melayani individu yang menghargai seni baik dalam rasa maupun penyajian.</p>					<br><br><br>
 
@@ -218,8 +218,8 @@
 
 				function smoothScroll() {
 						translateY += (scrollTargetY - translateY) * 0.1;
-						scrollingElement.style.transform = `translateY(${translateY}vh) translateX(-47vh)`;
-	
+						scrollingElement.style.transform = `translate(-50%, ${translateY}vh)`;
+
 						requestAnimationFrame(smoothScroll);
 				}
 
