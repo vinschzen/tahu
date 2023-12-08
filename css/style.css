@@ -366,7 +366,7 @@ a {
       .sticky-wrapper.is-sticky .site-navbar .site-navigation .site-menu > li.active a {
         color: #fff; }
 
-  #content div  {
+  #content > div  {
     position: absolute;
     /* text-shadow: 3px 3px 5px #272727; */
     top: 32vh; 
@@ -468,8 +468,8 @@ a {
   }
 
 
-#products img {
-  max-width: 100%;
+#products img,video {
+  /* max-width: 100%; */
   display: block;
 
   filter: saturate(1);
@@ -485,7 +485,29 @@ a {
   cursor: pointer;
 }
 
+#products video:hover {
+  filter: saturate(1.8);
+  padding: 0.2vh 0.2vw;
+  cursor: pointer;
+}
 
+.portrait img{
+  width: 12vw; 
+  height: 32vh; 
+  object-fit: cover; 
+}
+
+.landscape img{
+  width: 24vw; 
+  height: 32vh; 
+  object-fit: cover; 
+} 
+
+.landscape video{
+  width: 24vw; 
+  height: 32vh; 
+  object-fit: cover; 
+} 
 
 .landscape {
   grid-column-end: span 2;
@@ -520,5 +542,68 @@ figcaption {
   background-color: rgba(255,255,255,.5);
   padding: .2em .5em;
   justify-self: start;
+}
+
+
+
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#overlay.show {
+  display: flex;
+}
+
+#overlay figure {
+  margin: 0;
+}
+
+#overlay img,
+#overlay video {
+  margin: 25 auto;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
+}
+
+#overlay.show img,
+#overlay.show video {
+  opacity: 1; 
+}
+
+#overlay .close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#overlay.clicked {
+  display: none;
+}
+
+#overlay .image-info {
+  position: absolute;
+  bottom: 24vh;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+#overlay .image-info h2,
+#overlay .image-info p {
+  color: white;
+  margin: 0;
 }
 

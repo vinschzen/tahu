@@ -17,225 +17,250 @@
 	</head>
 	<body>
 
+		<div id="overlay">
+			<span class="close-button" onclick="hideOverlay()">X</span>
+			<div class="image-info">
+				<h2 id="overlay-title"></h2>
+				<p id="overlay-description"></p>
+			</div>
+		</div>
+
 		<div id="container">
 
-		<div class="site-mobile-menu site-navbar-target">''
-			<div class="site-mobile-menu-header">
-			  <div class="site-mobile-menu-close mt-3">
-				<span class="icon-close2 js-menu-toggle"></span>
-			  </div>
-			</div>
-			<div class="site-mobile-menu-body"></div>
-		  </div> 
-		  
-		  <div class="site-navbar-wrap">
-			<div class="site-navbar-top">
-			  <div class="container py-3">
-				<div class="row align-items-center">
-				  <div class="col-6">
-					<div class="d-flex mr-auto">
-					  <a href="#" class="d-flex align-items-center mr-4">
-						<span class="icon-envelope mr-2"></span>
-						<span class="d-none d-md-inline-block">info@tahu.com</span>
-					  </a>
-					  <a href="#" class="d-flex align-items-center mr-auto">
-						<span class="icon-phone mr-2"></span>
-						<span class="d-none d-md-inline-block">+1 234 4567 8910</span>
-					  </a>
+			<div class="site-mobile-menu site-navbar-target">''
+				<div class="site-mobile-menu-header">
+				<div class="site-mobile-menu-close mt-3">
+					<span class="icon-close2 js-menu-toggle"></span>
+				</div>
+				</div>
+				<div class="site-mobile-menu-body"></div>
+			</div> 
+			
+			<div class="site-navbar-wrap">
+				<div class="site-navbar-top">
+				<div class="container py-3">
+					<div class="row align-items-center">
+					<div class="col-6">
+						<div class="d-flex mr-auto">
+						<a href="#" class="d-flex align-items-center mr-4">
+							<span class="icon-envelope mr-2"></span>
+							<span class="d-none d-md-inline-block">info@tahu.com</span>
+						</a>
+						<a href="#" class="d-flex align-items-center mr-auto">
+							<span class="icon-phone mr-2"></span>
+							<span class="d-none d-md-inline-block">+1 234 4567 8910</span>
+						</a>
+						</div>
 					</div>
-				  </div>
-				  <div class="col-6 text-right">
-					<div class="mr-auto">
-					  <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
-					  <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
-					  <a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
-					  <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+					<div class="col-6 text-right">
+						<div class="mr-auto">
+						<a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
+						<a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
+						<a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
+						<a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+						</div>
+						
+					</div>
+					</div>
+				</div>
+				</div>
+		
+				<div class="site-navbar site-navbar-target js-sticky-header">
+				<div class="container">
+					<div class="row align-items-center">
+					<div class="col-2">
+						<h2 class="my-0 site-logo"><a href="#home-section" onclick="showContent('home')">TAHU</a></h2>
+					</div>
+					<div class="col-10">
+						<nav class="site-navigation text-right" role="navigation">
+						<div class="container">
+							<div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+		
+							<ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
+							<li class="active"><a href="#home-section" class="nav-link" onclick="showContent('home')" id="navbar-home">Beranda</a></li>
+							<li class=""><a href="#about-section" class="nav-link" onclick="showContent('about')" id="navbar-about">Tentang</a></li>
+							<li class=""><a href="#about-section" class="nav-link" onclick="showContent('products')" id="navbar-products">Produk</a></li>
+							<li class=""><a href="#about-section" class="nav-link" onclick="showContent('maps')" id="navbar-products">Peta</a></li>
+							<li class=""><a href="#about-section" class="nav-link" onclick="showContent('contacts')" id="navbar-contacts">Hubungi</a></li>
+							<li class="has-children">
+								<a href="#" class="nav-link" id="navbar-languages">Bahasa</a>
+								<ul class="dropdown arrow-top">
+								<li><a class="nav-link" href="index.html" id="op-en">Inggris</a></li>
+								<li><a class="nav-link" href="index_id.html" id="op-id">Indonesia</a></li>
+								<li><a class="nav-link" href="index_jp.html" id="op-jp">日本語</a></li>
+								</ul>
+							</li>
+							<!-- <li><a href="#contact-section" class="nav-link" onclick="showContent('contact')">🦖</a></li> -->
+							<li><a href="#" class="nav-link sound" id="speaker">🔇</a></li>
+							</ul>
+						</div>
+						</nav>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+
+
+				<div id="content">
+
+					<div id="home">
+						<h1 style="font-weight: bold;">TAHU NUSANTARA</h1>
+						<p>Selamat datang di Tahu, tempat inovasi bertemu rasa di setiap gigitan lezat. Mulailah perjalanan keunggulan kuliner saat kami mendefinisikan kembali seni tahu, menciptakan momen yang merayakan kekayaan rasa dan semangat keberlanjutan.</p>				
+					</div>
+				
+					
+					<div id="about">
+						<h1 style="font-weight: bold;">Deskripsi</h1>
+							<img src="Tahu.png" alt="" width="200vw">
+							<p>Tahu adalah merek premium yang didedikasikan untuk memberikan pengalaman kuliner canggih yang berpusat pada dua makanan pokok Indonesia: Tahu dan Tempe. Misi kami adalah untuk meningkatkan persepsi terhadap bahan-bahan tradisional ini dengan menawarkannya dalam penyajian yang elegan dan modern, melayani individu yang menghargai seni baik dalam rasa maupun penyajian.</p>					<br><br><br>
+
+						<h1 style="font-weight: bold;">Tim Kami</h1>
+							<img src="Team.png" alt="" width="200vw">
+							<p>Terdiri dari sekelompok individu berdedikasi yang bersemangat berbagi cita rasa asli Indonesia, tim kami yang beragam di Tahu berkomitmen untuk menyajikan Tahu kualitas terbaik ke meja Anda.</p>					<br><br><br>	
+
+						<h1 style="font-weight: bold;">Lokasi Kita</h1>
+							<img src="Indonesia.png" alt="" width="1000vw">
+							<p>Terletak di jantung perjalanan kuliner kami, Tahu dengan bangga beroperasi dari lanskap Indonesia yang dinamis. Mulai dari kekayaan warisan produksi Tahu hingga kesibukan tim kami, kami mengundang Anda untuk menjelajahi esensi asal usul kami dan menikmati cita rasa kerajinan asli Indonesia.</p>				
+					</div>
+
+					<div id="products"> 
+							<a>
+								<h1 style="font-weight: bold; text-align: left;">Tahu</h1>
+								<p style="text-align: justify; font-size: medium;">Perusahaan kami bangga menciptakan tahu ala Indonesia yang luar biasa dan berfokus pada kesehatan, menawarkan pengalaman kuliner yang menggugah selera namun lezat dan bergizi. Ini adalah produk kami.</p>						
+							</a>
+							<figure class="portrait">
+								<img src="images/1.jpg" alt="">
+							</figure>
+							<figure class="landscape">
+								<video controls>
+									<source src="images/video.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</figure>
+							<figure class="portrait">
+								<img src="images/3.jpg" alt="">
+							</figure>
+							<figure class="landscape">
+								<img src="images/5.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/4.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/6.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/7.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/8.jpg" alt="">
+							</figure>
+							<figure class="landscape">
+								<img src="images/9.jpg" alt="">
+							</figure>
+							<a class="landscape">
+								<h1 style="font-weight: bold; text-align: left;">Tempe</h1>
+								<p style="text-align: justify; font-size: medium;">Selidiki inti keahlian kuliner kami dengan menyajikan tempe khas Indonesia, yang dibuat secara terampil dengan presisi dan penuh semangat. Nikmati kekayaan tempe kami, yang disiapkan dengan cermat untuk mewujudkan perpaduan sempurna antara rasa tradisional dan kebaikan yang menyehatkan. Di perusahaan kami, kami bangga memberikan pengalaman kuliner yang tidak hanya memanjakan lidah namun juga mengedepankan gaya hidup sehat, memastikan setiap gigitan tempe kami mencerminkan esensi warisan kuliner Indonesia dengan sentuhan bergizi.</p>						
+							</a>
+							<figure class="portrait">
+								<img src="images/10.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/11.jpg" alt="">
+							</figure>
+							<figure class="landscape">
+								<img src="images/12.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/13.jpg" alt="">
+							</figure>
+					</div>
+
+					<div id="contacts" >
+						<h1 style="font-weight: bold;">Kontak Kami</h1>
+							<table id="contacts-form">
+								<tr>
+									<td>
+										<input type="text" placeholder="Nama Anda">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="text" placeholder="Email Anda">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<textarea name="" id="" cols="30" rows="5" placeholder="Pesan Anda"></textarea>
+									</td>
+								</tr>
+							</table>
+							<button type="submit">Kirim</button>
+					</div>
+
+					<div id="maps">
+						<h1 style="font-weight: bold;">Peta</h1>
+						<div id="map" style="width:70vw; height:50vh; margin: 4vh auto"></div>
 					</div>
 					
-				  </div>
-				</div>
-			  </div>
-			</div>
-	  
-			<div class="site-navbar site-navbar-target js-sticky-header">
-			  <div class="container">
-				<div class="row align-items-center">
-				  <div class="col-2">
-					<h2 class="my-0 site-logo"><a href="#home-section" onclick="showContent('home')">TAHU</a></h2>
-				  </div>
-				  <div class="col-10">
-					<nav class="site-navigation text-right" role="navigation">
-					  <div class="container">
-						<div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-	  
-						<ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-						  <li class="active"><a href="#home-section" class="nav-link" onclick="showContent('home')" id="navbar-home">Beranda</a></li>
-						  <li class=""><a href="#about-section" class="nav-link" onclick="showContent('about')" id="navbar-about">Tentang</a></li>
-						  <li class=""><a href="#about-section" class="nav-link" onclick="showContent('products')" id="navbar-products">Produk</a></li>
-						  <li class=""><a href="#about-section" class="nav-link" onclick="showContent('contacts')" id="navbar-contacts">Hubungi</a></li>
-						  <li class="has-children">
-							<a href="#" class="nav-link" id="navbar-languages">Bahasa</a>
-							<ul class="dropdown arrow-top">
-							  <li><a class="nav-link" href="index.html" id="op-en">Inggris</a></li>
-							  <li><a class="nav-link" href="index_id.html" id="op-id">Indonesia</a></li>
-							  <li><a class="nav-link" href="index_jp.html" id="op-jp">日本語</a></li>
-							</ul>
-						  </li>
-						  <!-- <li><a href="#contact-section" class="nav-link" onclick="showContent('contact')">🦖</a></li> -->
-						  <li><a href="#" class="nav-link sound" id="speaker">🔇</a></li>
-						</ul>
-					  </div>
-					</nav>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-	  
-		  	<div id="content">
-
-				<div id="home">
-					<h1 style="font-weight: bold;">TAHU NUSANTARA</h1>
-					<p>Selamat datang di Tahu, tempat inovasi bertemu rasa di setiap gigitan lezat. Mulailah perjalanan keunggulan kuliner saat kami mendefinisikan kembali seni tahu, menciptakan momen yang merayakan kekayaan rasa dan semangat keberlanjutan.</p>				</div>
-			
-				<div id="about">
-					<h1 style="font-weight: bold;">Deskripsi</h1>
-						<img src="Tahu.png" alt="" width="200vw">
-						<p>Tahu adalah merek premium yang didedikasikan untuk memberikan pengalaman kuliner canggih yang berpusat pada dua makanan pokok Indonesia: Tahu dan Tempe. Misi kami adalah untuk meningkatkan persepsi terhadap bahan-bahan tradisional ini dengan menawarkannya dalam penyajian yang elegan dan modern, melayani individu yang menghargai seni baik dalam rasa maupun penyajian.</p>					<br><br><br>
-
-					<h1 style="font-weight: bold;">Tim Kami</h1>
-						<img src="Team.png" alt="" width="200vw">
-						<p>Terdiri dari sekelompok individu berdedikasi yang bersemangat berbagi cita rasa asli Indonesia, tim kami yang beragam di Tahu berkomitmen untuk menyajikan Tahu kualitas terbaik ke meja Anda.</p>					<br><br><br>	
-
-					<h1 style="font-weight: bold;">Lokasi Kita</h1>
-						<img src="Indonesia.png" alt="" width="1000vw">
-						<p>Terletak di jantung perjalanan kuliner kami, Tahu dengan bangga beroperasi dari lanskap Indonesia yang dinamis. Mulai dari kekayaan warisan produksi Tahu hingga kesibukan tim kami, kami mengundang Anda untuk menjelajahi esensi asal usul kami dan menikmati cita rasa kerajinan asli Indonesia.</p>				</div>
-
-				<div id="products"> 
-						<a>
-							<h1 style="font-weight: bold; text-align: left;">Tahu</h1>
-							<p style="text-align: justify; font-size: medium;">Perusahaan kami bangga menciptakan tahu ala Indonesia yang luar biasa dan berfokus pada kesehatan, menawarkan pengalaman kuliner yang menggugah selera namun lezat dan bergizi. Ini adalah produk kami.</p>						</a>
-						
-						
-						<figure>
-							<img src="images/1.jpg" alt="">
-							<!-- <figcaption><a href="#">1</a></figcaption> -->
-						</figure>
-						<figure class="landscape">
-							<img src="images/2.jpg" alt="">
-							<!-- <figcaption><a href="#">2</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/3.jpg" alt="">
-							<!-- <figcaption><a href="#">3</a></figcaption> -->
-						</figure>
-						<figure class="landscape">
-							<img src="images/5.jpg" alt="">
-							<!-- <figcaption><a href="#">5</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/4.jpg" alt="">
-							<!-- <figcaption><a href="#">4</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/6.jpg" alt="">
-							<!-- <figcaption><a href="#">6</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/7.jpg" alt="">
-							<!-- <figcaption><a href="#">7</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/8.jpg" alt="">
-							<!-- <figcaption><a href="#">8</a></figcaption> -->
-						</figure>
-						<figure class="landscape">
-							<img src="images/9.jpg" alt="">
-							<!-- <figcaption><a href="#">9</a></figcaption> -->
-						</figure>
-						<a class="landscape">
-							<h1 style="font-weight: bold; text-align: left;">Tempe</h1>
-							<p style="text-align: justify; font-size: medium;">Selidiki inti keahlian kuliner kami dengan menyajikan tempe khas Indonesia, yang dibuat secara terampil dengan presisi dan penuh semangat. Nikmati kekayaan tempe kami, yang disiapkan dengan cermat untuk mewujudkan perpaduan sempurna antara rasa tradisional dan kebaikan yang menyehatkan. Di perusahaan kami, kami bangga memberikan pengalaman kuliner yang tidak hanya memanjakan lidah namun juga mengedepankan gaya hidup sehat, memastikan setiap gigitan tempe kami mencerminkan esensi warisan kuliner Indonesia dengan sentuhan bergizi.</p>						</a>
-						<figure>
-							<img src="images/10.jpg" alt="">
-							<!-- <figcaption><a href="#">10</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/11.jpg" alt="">
-							<!-- <figcaption><a href="#">11</a></figcaption> -->
-						</figure>
-						<figure class="landscape">
-							<img src="images/12.jpg" alt="">
-							<!-- <figcaption><a href="#">11</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/13.jpg" alt="">
-							<!-- <figcaption><a href="#">11</a></figcaption> -->
-						</figure>
-				</div>
-
-				<div id="contacts" >
-					<h1 style="font-weight: bold;">Kontak Kami</h1>
-						<table id="contacts-form">
-							<tr>
-								<td>
-									<input type="text" placeholder="Nama Anda">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="text" placeholder="Email Anda">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<textarea name="" id="" cols="30" rows="5" placeholder="Pesan Anda"></textarea>
-								</td>
-							</tr>
-						</table>
-			
-						<button type="submit">Kirim</button>
-
-					</div>
-
-				</div>
-
 				
 			</div>
 
-			
+		
 		</div>
 
 		<audio id="bgm" loop>
 			<source src="bengawansolo.mp3" type="audio/mp3">
 			Your browser does not support the audio element.
 		</audio>
+
+		<script src="overlay.js"></script>
+
+		<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+		<script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
 		
+		<script>
+			var map = new ol.Map({
+				target: 'map', // The HTML element with the 'map' id
+				layers: [
+					new ol.layer.Tile({
+					source: new ol.source.OSM()
+					})
+				],
+				view: new ol.View({
+					center: ol.proj.fromLonLat([112.7586, -7.2917]), 
+					zoom: 10 
+				})
+			});
+		</script>
+			
+
 		<script>
 				let translateY = 0;
 				let scrollTargetY = 0;
 				let scrollingElement = document.querySelector('#products');
 
 				function smoothScroll() {
-						translateY += (scrollTargetY - translateY) * 0.1;
-						scrollingElement.style.transform = `translate(-50%, ${translateY}vh)`;
+					translateY += (scrollTargetY - translateY) * 0.1;
+					scrollingElement.style.transform = `translate(-50%, ${translateY}vh)`;
 
-						requestAnimationFrame(smoothScroll);
+					requestAnimationFrame(smoothScroll);
 				}
 
 
 				window.addEventListener('wheel', function(event) {
-					document.getElementById('content').querySelectorAll('div').forEach(element => {
+					document.getElementById('content').querySelectorAll('div > div').forEach(element => {
+						console.log(element);
 						var computedStyle = window.getComputedStyle(element);
 						if (computedStyle.opacity === "1")
 						{
-							if (element.id == "home") return;
-							if (element.id == "contacts") return;
-
-							scrollingElement = element;
-							const scrollIncrement = 30; 
-							scrollTargetY += event.deltaY > 0 ? scrollIncrement : -scrollIncrement;
-							scrollTargetY = Math.max(-120, Math.min(0, scrollTargetY));
+							if (element.id == "about" || element.id == "products") {
+								scrollingElement = element;
+								const scrollIncrement = 30; 
+								scrollTargetY += event.deltaY > 0 ? scrollIncrement : -scrollIncrement;
+								scrollTargetY = Math.max(-120, Math.min(0, scrollTargetY));	
+							}
 							
 						}
 					});
@@ -244,7 +269,6 @@
 				smoothScroll();
 		</script>
 
-		<!-- <script src="translation.js"></script> -->
 		<script type="importmap">
 			{
 				"imports": {
@@ -262,21 +286,14 @@
 
 		<script src="audio.js"></script>
 		<script type="module">
-
-			// import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.module.js';
-			// import * as THREE from 'https://threejs.org/build/three.module.js';
-			// import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
-			// import { GLTFLoader } from 'https://unpkg.com/three@0.158.0/examples/jsm/loaders/GLTFLoader.js';
-			// import * as GLTFLoader from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
 			import * as TWEEN from 'https://cdn.skypack.dev/tween';
-
-			// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 			import * as THREE from 'three';
 			import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 			let camera, scene, renderer, bulbLight, bulbMat, hemiLight;
 			let ballMat, cubeMat, floorMat;
+			let selectedSection;
 
 			let previousShadowMap = false;
 
@@ -288,18 +305,15 @@
 
 					if ( node.isMesh ) { 
 						node.castShadow = true; 
-
 					}
 
 				} );
 				model = gltf.scene;
-				// model = new THREE.Mesh(model.mesh, model.material);
 
 				scene.add(model);
 			});
 
 
-			// ref for lumens: http://www.power-sure.com/lumens.htm
 			const bulbLuminousPowers = {
 				'110000 lm (1000W)': 110000,
 				'3500 lm (300W)': 3500,
@@ -311,7 +325,6 @@
 				'Off': 0
 			};
 
-			// ref for solar irradiances: https://en.wikipedia.org/wiki/Lux
 			const hemiLuminousIrradiances = {
 				'0.0001 lx (Moonless Night)': 0.0001,
 				'0.002 lx (Night Airglow)': 0.002,
@@ -341,8 +354,8 @@
 				const container = document.getElementById( 'container' );
 
 				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 100 );
-					camera.position.z = 0.45;
-					camera.position.y = 0.4;
+				camera.position.z = 0.45;
+				camera.position.y = 0.4;
 
 				scene = new THREE.Scene();
 
@@ -354,6 +367,7 @@
 					emissiveIntensity: 1,
 					color: 0x000000
 				} );
+
 				bulbLight.add( new THREE.Mesh( bulbGeometry, bulbMat ) );
 				bulbLight.position.set( 0, 0.7, 0 );
 				bulbLight.castShadow = true;
@@ -437,7 +451,17 @@
 
 				if (model) {
 					model.rotation.y += 0.003;
-					camera.lookAt(model.position);
+
+					if (selectedSection == "contacts")
+					{
+						camera.lookAt(1,-2.8 ,1);
+
+					}
+					else {
+						camera.lookAt(0,0,0);
+					}
+
+
 				}
 
 				TWEEN.update();
@@ -448,31 +472,26 @@
 
 			function render() {
 
-				renderer.toneMappingExposure = Math.pow( params.exposure, 5.0 ); // to allow for very bright scenes.
+				renderer.toneMappingExposure = Math.pow( params.exposure, 5.0 );
 				renderer.shadowMap.enabled = params.shadows;
 				bulbLight.castShadow = params.shadows;
 
 				if ( params.shadows !== previousShadowMap ) {
-
 					floorMat.needsUpdate = true;
 					previousShadowMap = params.shadows;
-
 				}
 
 				bulbLight.power = bulbLuminousPowers[ params.bulbPower ];
-				bulbMat.emissiveIntensity = bulbLight.intensity / Math.pow( 0.02, 2.0 ); // convert from intensity to irradiance at bulb surface
-
+				bulbMat.emissiveIntensity = bulbLight.intensity / Math.pow( 0.02, 2.0 ); 
 				hemiLight.intensity = hemiLuminousIrradiances[ params.hemiIrradiance ];
-				const time = Date.now() * 0.0005;
-
-				// bulbLight.position.y = Math.cos( time ) * 0.75 + 1.25;
 
 				renderer.render( scene, camera );
 
 			}
 
 			window.showContent = function(section) {
-				const sections = ['home', 'about', 'products', 'contacts'];
+				selectedSection = section;
+				const sections = ['home', 'about', 'products', 'contacts', 'maps'];
 				sections.forEach((s) => {
 					const element = document.getElementById(s);
 					if (s === section) {
@@ -512,7 +531,10 @@
 						targetPosition.set(0, 0.5, 1);
 						break;
 					case 'contacts':            
-						targetPosition.set(-1, -1, -1);
+						targetPosition.set(-0.4, 1.5, 1);
+						break;
+					case 'maps':            
+						targetPosition.set(2, 0.8, 0);
 						break;
 				};
 

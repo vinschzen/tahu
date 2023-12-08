@@ -17,205 +17,197 @@
 	</head>
 	<body>
 
-		<div style="width: 100%; height: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.8); z-index: 999; display: none">
-			
+		<div id="overlay">
+			<span class="close-button" onclick="hideOverlay()">X</span>
+			<div class="image-info">
+				<h2 id="overlay-title"></h2>
+				<p id="overlay-description"></p>
+			</div>
 		</div>
 
 		<div id="container">
 
-		<div class="site-mobile-menu site-navbar-target">''
-			<div class="site-mobile-menu-header">
-			  <div class="site-mobile-menu-close mt-3">
-				<span class="icon-close2 js-menu-toggle"></span>
-			  </div>
-			</div>
-			<div class="site-mobile-menu-body"></div>
-		  </div> 
-		  
-		  <div class="site-navbar-wrap">
-			<div class="site-navbar-top">
-			  <div class="container py-3">
-				<div class="row align-items-center">
-				  <div class="col-6">
-					<div class="d-flex mr-auto">
-					  <a href="#" class="d-flex align-items-center mr-4">
-						<span class="icon-envelope mr-2"></span>
-						<span class="d-none d-md-inline-block">info@tahu.com</span>
-					  </a>
-					  <a href="#" class="d-flex align-items-center mr-auto">
-						<span class="icon-phone mr-2"></span>
-						<span class="d-none d-md-inline-block">+1 234 4567 8910</span>
-					  </a>
+			<div class="site-mobile-menu site-navbar-target">''
+				<div class="site-mobile-menu-header">
+				<div class="site-mobile-menu-close mt-3">
+					<span class="icon-close2 js-menu-toggle"></span>
+				</div>
+				</div>
+				<div class="site-mobile-menu-body"></div>
+			</div> 
+			
+			<div class="site-navbar-wrap">
+				<div class="site-navbar-top">
+				<div class="container py-3">
+					<div class="row align-items-center">
+					<div class="col-6">
+						<div class="d-flex mr-auto">
+						<a href="#" class="d-flex align-items-center mr-4">
+							<span class="icon-envelope mr-2"></span>
+							<span class="d-none d-md-inline-block">info@tahu.com</span>
+						</a>
+						<a href="#" class="d-flex align-items-center mr-auto">
+							<span class="icon-phone mr-2"></span>
+							<span class="d-none d-md-inline-block">+1 234 4567 8910</span>
+						</a>
+						</div>
 					</div>
-				  </div>
-				  <div class="col-6 text-right">
-					<div class="mr-auto">
-					  <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
-					  <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
-					  <a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
-					  <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+					<div class="col-6 text-right">
+						<div class="mr-auto">
+						<a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
+						<a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
+						<a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
+						<a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+						</div>
+						
+					</div>
+					</div>
+				</div>
+				</div>
+		
+				<div class="site-navbar site-navbar-target js-sticky-header">
+				<div class="container">
+					<div class="row align-items-center">
+					<div class="col-2">
+						<h2 class="my-0 site-logo"><a href="#home-section" onclick="showContent('home')">TAHU</a></h2>
+					</div>
+					<div class="col-10">
+						<nav class="site-navigation text-right" role="navigation">
+						<div class="container">
+							<div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+		
+							<ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
+							<li class="active"><a href="#home-section" class="nav-link" onclick="showContent('home')" id="navbar-home">Home</a></li>
+							<li class=""><a href="#about-section" class="nav-link" onclick="showContent('about')" id="navbar-about">About</a></li>
+							<li class=""><a href="#about-section" class="nav-link" onclick="showContent('products')" id="navbar-products">Products</a></li>
+							<li class=""><a href="#about-section" class="nav-link" onclick="showContent('maps')" id="navbar-products">Map</a></li>
+							<li class=""><a href="#about-section" class="nav-link" onclick="showContent('contacts')" id="navbar-contacts">Contacts</a></li>
+							<li class="has-children">
+								<a href="#" class="nav-link" id="navbar-languages">Languages</a>
+								<ul class="dropdown arrow-top">
+								<li><a class="nav-link" href="index.html" id="op-en">English</a></li>
+								<li><a class="nav-link" href="index_id.html" id="op-id">Indonesian</a></li>
+								<li><a class="nav-link" href="index_jp.html" id="op-jp">日本語</a></li>
+								</ul>
+							</li>
+							<!-- <li><a href="#contact-section" class="nav-link" onclick="showContent('contact')">🦖</a></li> -->
+							<li><a href="#" class="nav-link sound" id="speaker">🔇</a></li>
+							</ul>
+						</div>
+						</nav>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+
+
+				<div id="content">
+
+					<div id="home">
+						<h1 style="font-weight: bold;">TAHU NUSANTARA</h1>
+						<p>Welcome to Tahu, where innovation meets flavor in every delectable bite. Embark on a journey of culinary excellence as we redefine the art of tofu, crafting moments that celebrate the richness of taste and the spirit of sustainability.</p>
+					</div>
+				
+					
+					<div id="about">
+						<h1 style="font-weight: bold;">Description</h1>
+							<img src="Tahu.png" alt="" width="200vw">
+							<p>Tahu is a premium brand dedicated to providing a sophisticated culinary experience centered around two Indonesian culinary staples: Tahu (tofu) and Tempe. Our mission is to elevate the perception of these traditional ingredients by offering them in an elegant and modern presentation, catering to individuals who appreciate the artistry in both taste and presentation.</p>
+
+						<h1 style="font-weight: bold;">Our Team</h1>
+							<img src="Team.png" alt="" width="200vw">
+							<p>Comprising a dedicated group of individuals passionate about sharing the authentic flavors of Indonesia, our diverse team at Tahu is committed to delivering the finest quality Tahu to your table.</p>
+
+						<h1 style="font-weight: bold;">Where We Are</h1>
+							<img src="Indonesia.png" alt="" width="1000vw">
+							<p>Nestled at the heart of our culinary journey, Tahu proudly operates from the vibrant landscapes of Indonesia. From the rich heritage of our Tahu production to the bustling energy of our team, we invite you to explore the essence of our origins and savor the taste of true Indonesian craftsmanship.</p>
+						</div>
+
+					<div id="products"> 
+							<a>
+								<h1 style="font-weight: bold; text-align: left;">Tahu</h1>
+								<p style="text-align: justify; font-size: medium;">Our company takes pride in crafting the upmost exceptional, health-focused ala Indonesian tofu, offering a salivating yet tantilizingly delicious and nutritious culinary experience. These are our products.</p>
+							</a>
+							<figure class="portrait">
+								<img src="images/1.jpg" alt="">
+							</figure>
+							<figure class="landscape">
+								<video controls>
+									<source src="images/video.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</figure>
+							<figure class="portrait">
+								<img src="images/3.jpg" alt="">
+							</figure>
+							<figure class="landscape">
+								<img src="images/5.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/4.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/6.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/7.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/8.jpg" alt="">
+							</figure>
+							<figure class="landscape">
+								<img src="images/9.jpg" alt="">
+							</figure>
+							<a class="landscape">
+								<h1 style="font-weight: bold; text-align: left;">Tempe</h1>
+								<p style="text-align: justify; font-size: medium;">Delve into the heart of our culinary expertise as we present our distinctive Indonesian tempe, skillfully crafted with precision and passion. Savor the richness of our tempe, meticulously prepared to embody a perfect blend of traditional flavors and wholesome goodness. At our company, we take pride in delivering a culinary experience that not only delights the taste buds but also promotes a healthy lifestyle, ensuring each bite of our tempe reflects the essence of Indonesian culinary heritage with a nutritious twist.</p>
+							</a>
+							<figure class="portrait">
+								<img src="images/10.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/11.jpg" alt="">
+							</figure>
+							<figure class="landscape">
+								<img src="images/12.jpg" alt="">
+							</figure>
+							<figure class="portrait">
+								<img src="images/13.jpg" alt="">
+							</figure>
+					</div>
+
+					<div id="contacts" >
+						<h1 style="font-weight: bold;">Contact Us</h1>
+						<table id="contacts-form">
+								<tr>
+									<td>
+										<input type="text" placeholder="Nama Anda">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="text" placeholder="Email Anda">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<textarea name="" id="" cols="30" rows="5" placeholder="Pesan Anda"></textarea>
+									</td>
+								</tr>
+							</table>
+							<button type="submit">Submit</button>
+					</div>
+
+					<div id="maps">
+						<h1 style="font-weight: bold;">Map</h1>
+						<div id="map" style="width:70vw; height:50vh; margin: 4vh auto"></div>
 					</div>
 					
-				  </div>
-				</div>
-			  </div>
-			</div>
-	  
-			<div class="site-navbar site-navbar-target js-sticky-header">
-			  <div class="container">
-				<div class="row align-items-center">
-				  <div class="col-2">
-					<h2 class="my-0 site-logo"><a href="#home-section" onclick="showContent('home')">TAHU</a></h2>
-				  </div>
-				  <div class="col-10">
-					<nav class="site-navigation text-right" role="navigation">
-					  <div class="container">
-						<div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-	  
-						<ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-						  <li class="active"><a href="#home-section" class="nav-link" onclick="showContent('home')" id="navbar-home">Home</a></li>
-						  <li class=""><a href="#about-section" class="nav-link" onclick="showContent('about')" id="navbar-about">About</a></li>
-						  <li class=""><a href="#about-section" class="nav-link" onclick="showContent('products')" id="navbar-products">Products</a></li>
-						  <li class=""><a href="#about-section" class="nav-link" onclick="showContent('contacts')" id="navbar-contacts">Contacts</a></li>
-						  <li class="has-children">
-							<a href="#" class="nav-link" id="navbar-languages">Languages</a>
-							<ul class="dropdown arrow-top">
-							  <li><a class="nav-link" href="index.html" id="op-en">English</a></li>
-							  <li><a class="nav-link" href="index_id.html" id="op-id">Indonesia</a></li>
-							  <li><a class="nav-link" href="index_jp.html" id="op-jp">日本語</a></li>
-							</ul>
-						  </li>
-						  <!-- <li><a href="#contact-section" class="nav-link" onclick="showContent('contact')">🦖</a></li> -->
-						  <li><a href="#" class="nav-link sound" id="speaker">🔇</a></li>
-						</ul>
-					  </div>
-					</nav>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-	  
-		  	<div id="content">
-
-				<div id="home">
-					<h1 style="font-weight: bold;">TAHU NUSANTARA</h1>
-					<p>Welcome to Tahu, where innovation meets flavor in every delectable bite. Embark on a journey of culinary excellence as we redefine the art of tofu, crafting moments that celebrate the richness of taste and the spirit of sustainability.</p>
-				</div>
-			
-				<div id="about">
-					<h1 style="font-weight: bold;">About Us</h1>
-					<img src="Tahu.png" alt="" width="200vw">
-						<p>Tahu is a premium brand dedicated to providing a sophisticated culinary experience centered around two Indonesian culinary staples: Tahu (tofu) and Tempe. Our mission is to elevate the perception of these traditional ingredients by offering them in an elegant and modern presentation, catering to individuals who appreciate the artistry in both taste and presentation.</p>
-					<br><br><br>
-
-					<h1 style="font-weight: bold;">Our Team</h1>
-						<img src="Team.png" alt="" width="200vw">
-						<p>Comprising a dedicated group of individuals passionate about sharing the authentic flavors of Indonesia, our diverse team at Tahu is committed to delivering the finest quality Tahu to your table.</p>
-					<br><br><br>	
-
-					<h1 style="font-weight: bold;">Where We are</h1>
-						<div id="googleMap" style="width:100%;height:400px;"></div>
-
-						<img src="Indonesia.png" alt="" width="1000vw">
-						<p>Nestled at the heart of our culinary journey, Tahu proudly operates from the vibrant landscapes of Indonesia. From the rich heritage of our Tahu production to the bustling energy of our team, we invite you to explore the essence of our origins and savor the taste of true Indonesian craftsmanship.</p>
-				</div>
-
-				<div id="products"> 
-						<a>
-							<h1 style="font-weight: bold; text-align: left;">Tahu</h1>
-							<p style="text-align: justify; font-size: medium;">Our company takes pride in crafting the upmost exceptional, health-focused ala Indonesian tofu, offering a salivating yet tantilizingly delicious and nutritious culinary experience. These are our products.</p>
-						</a>
-						
-						
-						<figure>
-							<img src="images/1.jpg" alt="">
-							<!-- <figcaption><a href="#">1</a></figcaption> -->
-						</figure>
-						<figure class="landscape">
-							<img src="images/2.jpg" alt="">
-							<!-- <figcaption><a href="#">2</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/3.jpg" alt="">
-							<!-- <figcaption><a href="#">3</a></figcaption> -->
-						</figure>
-						<figure class="landscape">
-							<img src="images/5.jpg" alt="">
-							<!-- <figcaption><a href="#">5</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/4.jpg" alt="">
-							<!-- <figcaption><a href="#">4</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/6.jpg" alt="">
-							<!-- <figcaption><a href="#">6</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/7.jpg" alt="">
-							<!-- <figcaption><a href="#">7</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/8.jpg" alt="">
-							<!-- <figcaption><a href="#">8</a></figcaption> -->
-						</figure>
-						<figure class="landscape">
-							<img src="images/9.jpg" alt="">
-							<!-- <figcaption><a href="#">9</a></figcaption> -->
-						</figure>
-						<a class="landscape">
-							<h1 style="font-weight: bold; text-align: left;">Tempe</h1>
-							<p style="text-align: justify; font-size: medium;">Delve into the heart of our culinary expertise as we present our distinctive Indonesian tempe, skillfully crafted with precision and passion. Savor the richness of our tempe, meticulously prepared to embody a perfect blend of traditional flavors and wholesome goodness. At our company, we take pride in delivering a culinary experience that not only delights the taste buds but also promotes a healthy lifestyle, ensuring each bite of our tempe reflects the essence of Indonesian culinary heritage with a nutritious twist.</p>
-						</a>
-						<figure>
-							<img src="images/10.jpg" alt="">
-							<!-- <figcaption><a href="#">10</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/11.jpg" alt="">
-							<!-- <figcaption><a href="#">11</a></figcaption> -->
-						</figure>
-						<figure class="landscape">
-							<img src="images/12.jpg" alt="">
-							<!-- <figcaption><a href="#">11</a></figcaption> -->
-						</figure>
-						<figure>
-							<img src="images/13.jpg" alt="">
-							<!-- <figcaption><a href="#">11</a></figcaption> -->
-						</figure>
-				</div>
-
-				<div id="contacts" >
-					<h1 style="font-weight: bold;">Contact Us</h1>
-						<table id="contacts-form">
-							<tr>
-								<td>
-									<input type="text" placeholder="Your Name">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="text" placeholder="Your Email">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<textarea name="" id="" cols="30" rows="5" placeholder="Your Message"></textarea>
-								</td>
-							</tr>
-						</table>
-			
-						<button type="submit">Submit</button>
-
-					</div>
-
-				</div>
-
 				
 			</div>
 
-			
+		
 		</div>
 
 		<audio id="bgm" loop>
@@ -223,32 +215,54 @@
 			Your browser does not support the audio element.
 		</audio>
 
+		<script src="overlay.js"></script>
+
+		<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+		<script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+		
+		<script>
+			// Create a new OpenLayers map
+			var map = new ol.Map({
+				target: 'map', // The HTML element with the 'map' id
+				layers: [
+					// Add OpenStreetMap as the base layer
+					new ol.layer.Tile({
+					source: new ol.source.OSM()
+					})
+				],
+				view: new ol.View({
+					center: ol.proj.fromLonLat([112.7586, -7.2917]), // Center the map at the specified coordinates (longitude, latitude)
+					zoom: 10 // Set the initial zoom level
+				})
+			});
+		</script>
+			
+
 		<script>
 				let translateY = 0;
 				let scrollTargetY = 0;
 				let scrollingElement = document.querySelector('#products');
 
 				function smoothScroll() {
-						translateY += (scrollTargetY - translateY) * 0.1;
-						scrollingElement.style.left = "50%";
-						scrollingElement.style.transform = `translate(-50%, ${translateY}vh)`;
-	
-						requestAnimationFrame(smoothScroll);
+					translateY += (scrollTargetY - translateY) * 0.1;
+					scrollingElement.style.transform = `translate(-50%, ${translateY}vh)`;
+
+					requestAnimationFrame(smoothScroll);
 				}
 
 
 				window.addEventListener('wheel', function(event) {
-					document.getElementById('content').querySelectorAll('div').forEach(element => {
+					document.getElementById('content').querySelectorAll('div > div').forEach(element => {
+						console.log(element);
 						var computedStyle = window.getComputedStyle(element);
 						if (computedStyle.opacity === "1")
 						{
-							if (element.id == "home") return;
-							if (element.id == "contacts") return;
-
-							scrollingElement = element;
-							const scrollIncrement = 30; 
-							scrollTargetY += event.deltaY > 0 ? scrollIncrement : -scrollIncrement;
-							scrollTargetY = Math.max(-120, Math.min(0, scrollTargetY));
+							if (element.id == "about" || element.id == "products") {
+								scrollingElement = element;
+								const scrollIncrement = 30; 
+								scrollTargetY += event.deltaY > 0 ? scrollIncrement : -scrollIncrement;
+								scrollTargetY = Math.max(-120, Math.min(0, scrollTargetY));	
+							}
 							
 						}
 					});
@@ -257,7 +271,6 @@
 				smoothScroll();
 		</script>
 
-		<!-- <script src="translation.js"></script> -->
 		<script type="importmap">
 			{
 				"imports": {
@@ -275,22 +288,13 @@
 
 		<script src="audio.js"></script>
 		<script type="module">
-
-			// import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.module.js';
-			// import * as THREE from 'https://threejs.org/build/three.module.js';
-			// import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
-			// import { GLTFLoader } from 'https://unpkg.com/three@0.158.0/examples/jsm/loaders/GLTFLoader.js';
-			// import * as GLTFLoader from 'https://threejs.org/examples/jsm/loaders/GLTFLoader.js';
 			import * as TWEEN from 'https://cdn.skypack.dev/tween';
-
-			// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 			import * as THREE from 'three';
 			import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 			let camera, scene, renderer, bulbLight, bulbMat, hemiLight;
 			let ballMat, cubeMat, floorMat;
-
 			let selectedSection;
 
 			let previousShadowMap = false;
@@ -303,18 +307,15 @@
 
 					if ( node.isMesh ) { 
 						node.castShadow = true; 
-
 					}
 
 				} );
 				model = gltf.scene;
-				// model = new THREE.Mesh(model.mesh, model.material);
 
 				scene.add(model);
 			});
 
 
-			// ref for lumens: http://www.power-sure.com/lumens.htm
 			const bulbLuminousPowers = {
 				'110000 lm (1000W)': 110000,
 				'3500 lm (300W)': 3500,
@@ -326,7 +327,6 @@
 				'Off': 0
 			};
 
-			// ref for solar irradiances: https://en.wikipedia.org/wiki/Lux
 			const hemiLuminousIrradiances = {
 				'0.0001 lx (Moonless Night)': 0.0001,
 				'0.002 lx (Night Airglow)': 0.002,
@@ -356,8 +356,8 @@
 				const container = document.getElementById( 'container' );
 
 				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 100 );
-					camera.position.z = 0.45;
-					camera.position.y = 0.4;
+				camera.position.z = 0.45;
+				camera.position.y = 0.4;
 
 				scene = new THREE.Scene();
 
@@ -369,6 +369,7 @@
 					emissiveIntensity: 1,
 					color: 0x000000
 				} );
+
 				bulbLight.add( new THREE.Mesh( bulbGeometry, bulbMat ) );
 				bulbLight.position.set( 0, 0.7, 0 );
 				bulbLight.castShadow = true;
@@ -452,6 +453,17 @@
 
 				if (model) {
 					model.rotation.y += 0.003;
+
+					if (selectedSection == "contacts")
+					{
+						camera.lookAt(1,-2.8 ,1);
+
+					}
+					else {
+						camera.lookAt(0,0,0);
+					}
+
+
 				}
 
 				TWEEN.update();
@@ -462,31 +474,26 @@
 
 			function render() {
 
-				renderer.toneMappingExposure = Math.pow( params.exposure, 5.0 ); // to allow for very bright scenes.
+				renderer.toneMappingExposure = Math.pow( params.exposure, 5.0 );
 				renderer.shadowMap.enabled = params.shadows;
 				bulbLight.castShadow = params.shadows;
 
 				if ( params.shadows !== previousShadowMap ) {
-
 					floorMat.needsUpdate = true;
 					previousShadowMap = params.shadows;
-
 				}
 
 				bulbLight.power = bulbLuminousPowers[ params.bulbPower ];
-				bulbMat.emissiveIntensity = bulbLight.intensity / Math.pow( 0.02, 2.0 ); // convert from intensity to irradiance at bulb surface
-
+				bulbMat.emissiveIntensity = bulbLight.intensity / Math.pow( 0.02, 2.0 ); 
 				hemiLight.intensity = hemiLuminousIrradiances[ params.hemiIrradiance ];
-				const time = Date.now() * 0.0005;
-
-				// bulbLight.position.y = Math.cos( time ) * 0.75 + 1.25;
 
 				renderer.render( scene, camera );
 
 			}
 
 			window.showContent = function(section) {
-				const sections = ['home', 'about', 'products', 'contacts'];
+				selectedSection = section;
+				const sections = ['home', 'about', 'products', 'contacts', 'maps'];
 				sections.forEach((s) => {
 					const element = document.getElementById(s);
 					if (s === section) {
@@ -526,7 +533,10 @@
 						targetPosition.set(0, 0.5, 1);
 						break;
 					case 'contacts':            
-						targetPosition.set(0, 1, 1.5);
+						targetPosition.set(-0.4, 1.5, 1);
+						break;
+					case 'maps':            
+						targetPosition.set(2, 0.8, 0);
 						break;
 				};
 
